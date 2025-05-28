@@ -1,5 +1,5 @@
 require("dotenv").config();
-const{s3} = require("../Utils/aws-helper")
+const{s3} = require("../utils/aws-helper")
 
 const randomString = (numberC) =>{
     return `${Math.random().toString(36)
