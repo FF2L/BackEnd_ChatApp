@@ -58,6 +58,8 @@ app.use('/api/search', require('./routes/search.route'))
 app.use('/api/user', require('./routes/user.route'))
 //Sử dụng API cho upload file
 app.use('/api/upload', require('./routes/upload.route'))
+//Sử dụng API cho test
+app.use('/api/test', require('./routes/test.route'))
 
 // emit là gửi sự kiện với 2 tham số là tên sự kiện và giá trị gửi di
 //on là nhận sử kiện  với 2 tham số là tên sự kiện và giá trị đã gửi(giá trị nhận được)

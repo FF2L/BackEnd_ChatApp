@@ -13,7 +13,7 @@
     const token = urlParams.get("token");
     const roomId = urlParams.get("room");
 
-    fetch("https://chat.fff3l.click/api/auth/verify-token", {
+    fetch("https://47.129.240.146:5000/api/auth/verify-token", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@
     .then(({ userId }) => {
       if (!userId) return;
 
-      const socket = io("https://chat.fff3l.click");
+      const socket = io("https://47.129.240.146:5000");
       socket.emit("reset-password-verified", { roomId, userId });
     })
     .catch(err => {
