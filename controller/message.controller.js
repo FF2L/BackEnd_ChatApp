@@ -269,7 +269,7 @@ messageController.forward = async (req,res) =>{
 
             try{
                 const chatRoom = await ChatRoom.findById(chatId)
-                chatRoom.latestMessage = messageId
+                chatRoom.latestMessage = message._id
                 await chatRoom.save()
             }catch(err){
                 console.log('Lỗi cập nhật latestMessage trong chatRoom:', err);
